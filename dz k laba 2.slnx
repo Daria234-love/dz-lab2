@@ -1,7 +1,28 @@
-<Solution>
-  <Configurations>
-    <Platform Name="x64" />
-    <Platform Name="x86" />
-  </Configurations>
-  <Project Path="dz k laba 2/dz k laba 2.vcxproj" />
-</Solution>
+#include <stdio.h>
+#include <locale.h>
+
+int main ()
+{
+    setlocale(LC_CTYPE, "RUS");
+    float rho, L, S, R;
+
+    rho = 0.01728f;
+    L = 100.0f;
+    S = 1.5f;
+
+    printf("Тема: Расчет сопротивления проводника\n");
+    printf("Формула: R = rho * L / S\n\n");
+
+    printf("Дано (по варианту 13):\n");
+    printf("\tУдельное сопротивление (rho): %.4f\n", rho);
+    printf("\tДлина проводника (L): %.2f м\n", L);
+    printf("\tПлощадь сечения (S): %.2f мм^2\n\n", S);
+
+    
+    R = rho * (L / S);
+
+    printf("Ответ:\n");
+    printf("\t%10.4f\n\n", R);
+
+    return 0;
+}
